@@ -1,0 +1,82 @@
+---
+import "../styles/main.css";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import About from "../components/About.astro";
+import Experiences from "../components/Experiences.astro";
+import Skills from "../components/Skills.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bayon&display=swap" rel="stylesheet" />
+
+    <title>Gabrielle - Portfolio</title>
+    <style is:inline>
+      @layer reset, global, tokens, components, overrides;
+    </style>
+  </head>
+  <body>
+    <Header />
+    <Hero />
+    <About />
+    <Experiences />
+    <Skills />
+    <slot />
+    <Footer />
+    <button class="back-to-top">Back to top</button>
+  </body>
+</html>
+
+<style>
+  .back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    padding: var(--space-xs) var(--space-s);
+    border-radius: 999px;
+    border: none;
+
+    background: black;
+    color: white;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+  }
+
+  .back-to-top.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.querySelector(".back-to-top");
+
+    if (!btn) return;
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        btn.classList.add("show");
+      } else {
+        btn.classList.remove("show");
+      }
+    });
+
+    btn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  });
+</script>

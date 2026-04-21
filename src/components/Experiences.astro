@@ -1,0 +1,100 @@
+---
+import NewSection from "./NewSection.astro";
+---
+
+<section class="padding_sec" id="experiences">
+  <NewSection text="Experiences" color="black" side="right" />
+  <h2 class="center_text">School and personal projects</h2>
+
+  <div class="center_text xp_info">
+    <p>
+      Through my studies in Multimedia Design, I have developed practical skills in web development, design tools, and UX/UI principles. The school projects presented below are selected group projects that highlight my competencies within UX/UI design, front-end development, and JavaScript.
+
+      <br /><br />
+
+      Working collaboratively on these cases has given me hands-on experience with coding, digital design, and user-centered solutions, strengthening my ability to transform ideas into functional and visually engaging digital products.
+      <br /><br />
+      I have also applied these skills in personal projects, including recently developing a website for a client.
+    </p>
+  </div>
+
+  <h3 class="center_text">School projects</h3>
+  <p class="center_text xp_info">I have selected these school projects to highlight my competencies within UX/UI design and JavaScript development.</p>
+  <div class="projects">
+    <a href="https://donornord.netlify.app/" target="_blank" rel="noopener noreferrer">
+      <img src="/donornord.webp" alt="Donornord projekt" />
+    </a>
+
+    <a href="https://babygamegabrielle.netlify.app/spil" target="_blank" rel="noopener noreferrer">
+      <img src="/baby_game.webp" alt="" />
+    </a>
+
+    <a href="https://gami0001.github.io/exercises/to_do/" target="_blank" rel="noopener noreferrer">
+      <img src="to_do_app.webp" alt="" />
+    </a>
+  </div>
+
+  <h3 class="center_text">Personal projects</h3>
+  <p class="center_text xp_info">In this project, I collaborated with a client to develop a website, applying my skills in design and web development.</p>
+  <div class="projects single-project">
+    <a href="https://www.for-otto.dk/" target="_blank" rel="noopener noreferrer">
+      <img src="/for_otto.webp" alt="Donornord projekt" />
+    </a>
+  </div>
+</section>
+
+<style>
+  .xp_info {
+    max-width: 65ch;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: var(--space-m);
+    line-height: 1.8;
+  }
+
+  h3 {
+    padding-top: var(--space-2xl);
+  }
+
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 40px auto 0 auto;
+  }
+
+  .projects img {
+    width: 100%;
+    display: block;
+    border-radius: 0.8rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .projects a:hover img {
+    transform: scale(1.04);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  }
+
+  .single-project {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .single-project img {
+    max-width: 350px;
+  }
+
+  @media (max-width: 700px) {
+    .projects {
+      padding-inline: var(--space-m);
+    }
+
+    .single-project img {
+      max-width: 150px;
+    }
+  }
+</style>

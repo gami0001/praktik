@@ -1,0 +1,54 @@
+---
+const {
+  text = "New Section", 
+  color = "white", 
+  side = "right", 
+} = Astro.props;
+---
+
+<section class={`new_section ${color} ${side}`}>
+  <div class="box">
+    {text}
+  </div>
+</section>
+
+<style>
+  @layer components {
+    .new_section {
+      display: grid;
+      grid-column: content-start / content-end;
+      padding-bottom: 2rem;
+      font-family: "Bayon", sans-serif;
+      font-size: clamp(0.9rem, 2vw, 1.5rem);
+        margin-bottom: 2rem;
+    }
+
+    .new_section .box {
+      display: inline-block; 
+      padding: 0.5rem 1rem; 
+      background: inherit; 
+      color: inherit;
+      max-width: /
+      box-sizing: border-box;
+    }
+
+
+    .new_section.white .box {
+      background: white;
+      color: black;
+    }
+
+    .new_section.black .box {
+      background: black;
+      color: white;
+    }
+
+    .new_section.right .box {
+      justify-self: end;
+    }
+
+    .new_section.left .box {
+      justify-self: start;
+    }
+  }
+</style>

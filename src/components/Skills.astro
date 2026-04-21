@@ -1,0 +1,43 @@
+---
+import NewSection from "./NewSection.astro";
+---
+
+<section class="padding_sec" id="skills">
+  <NewSection text="Skills" color="black" side="left" />
+
+  <div class="skills_info">
+    <h2>My skills</h2>
+    <p>To be more specific, the following list highlights the skills I have developed through my studies, lectures, and project work. These include both technical competencies and design-related abilities gained through hands-on experience with real cases.</p>
+  </div>
+  <ul class="skills">
+    <li><b>Web Development:</b> Visual Studio Code, HTML, CSS, JS, Astro, React, GitHub</li>
+    <li><b>Design Tools:</b> Adobe Illustrator, Photoshop, InDesign, Figma</li>
+    <li><b>UX/UI:</b> Understanding of user experience and interface design principles</li>
+  </ul>
+</section>
+
+<style>
+  .skills_info {
+    padding: var(--space-m) 0 var(--space-m) var(--space-xl);
+    max-width: 65ch;
+
+    p {
+      padding-top: var(--space-xs);
+      line-height: 1.8;
+    }
+  }
+
+  .skills {
+    padding-top: var(--space-s);
+    max-width: 65ch;
+    margin: 0 auto;
+    margin-bottom: var(--space-3xl);
+  }
+
+  @media (max-width: 700px) {
+    .skills_info {
+      padding: var(--space-m) var(--space-xs) var(--space-m) var(--space-xs);
+      max-width: 65ch;
+    }
+  }
+</style>

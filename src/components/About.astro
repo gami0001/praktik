@@ -1,0 +1,36 @@
+---
+import NewSection from "./NewSection.astro";
+---
+
+<section class="padding_sec" id="about">
+  <NewSection text="About" color="black" side="left" />
+  <div class="about_info">
+    <h2>Hello! My name is Gabrielle</h2>
+    <p>
+      I am currently studying Multimedia Design at Erhvervsakademi København, specializing in <b>Front-End Development</b>. I enjoy combining creativity and code to build responsive and user-friendly digital experiences using HTML, CSS, and JavaScript.
+
+      <br /><br />
+
+      Alongside my studies, I have a background in sewing and running my own tailoring service. This has strengthened my attention to detail, structure, and aesthetics-skills I bring into my work as a front-end developer, along with a thoughtful and sustainable approach to design.
+    </p>
+  </div>
+</section>
+
+<style>
+  .about_info {
+    padding: var(--space-m) 0 var(--space-m) var(--space-xl);
+    max-width: 65ch;
+
+    p {
+      padding-top: var(--space-xs);
+      line-height: 1.8;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .about_info {
+      padding: var(--space-m) var(--space-xs) var(--space-m) var(--space-xs);
+      max-width: 65ch;
+    }
+  }
+</style>
