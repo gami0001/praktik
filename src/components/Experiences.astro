@@ -4,44 +4,63 @@ import NewSection from "./NewSection.astro";
 
 <section class="padding_sec" id="experiences">
   <NewSection text="Experiences" color="black" side="right" />
-  <h2 class="center_text">School and personal projects</h2>
-
-  <div class="center_text xp_info">
+  <div class="experiences_info">
+    <h2>My Projects & Experience</h2>
     <p>
-      Through my studies in Multimedia Design, I have developed practical skills in web development, design tools, and UX/UI principles. The school projects presented below are selected group projects that highlight my competencies within UX/UI design, front-end development, and JavaScript.
+      Through my studies in Multimedia Design, my internship at Modström, and personal projects, I have gained experience in front-end development, UX/UI design, and digital communication.
 
       <br /><br />
 
-      Working collaboratively on these cases has given me hands-on experience with coding, digital design, and user-centered solutions, strengthening my ability to transform ideas into functional and visually engaging digital products.
-      <br /><br />
-      I have also applied these skills in personal projects, including recently developing a website for a client.
+      I enjoy combining creativity and technical understanding to develop functional, visually engaging, and user-centered digital solutions.
     </p>
   </div>
 
-  <h3 class="center_text">School projects</h3>
-  <p class="center_text xp_info">I have selected these school projects to highlight my competencies within UX/UI design and JavaScript development.</p>
+  <h3 class="center_text">School Projects</h3>
+  <p class="center_text xp_info">A selection of group projects highlighting my skills in UX/UI design, front-end development, and JavaScript.</p>
+
   <div class="projects">
     <a href="https://gajol.vercel.app/" target="_blank" rel="noopener noreferrer">
-      <img src="nightclub.webp" alt="" />
+      <img src="/nightclub.webp" alt="Nightclub website project" />
     </a>
+
     <a href="https://donornord.netlify.app/" target="_blank" rel="noopener noreferrer">
-      <img src="/donornord.webp" alt="Donornord projekt" />
+      <img src="/donornord.webp" alt="Donornord website project" />
     </a>
 
     <a href="https://babygamegabrielle.netlify.app/spil" target="_blank" rel="noopener noreferrer">
-      <img src="/baby_game.webp" alt="" />
+      <img src="/baby_game.webp" alt="JavaScript game project" />
     </a>
 
     <a href="https://gami0001.github.io/exercises/to_do/" target="_blank" rel="noopener noreferrer">
-      <img src="to_do_app.webp" alt="" />
+      <img src="/to_do_app.webp" alt="JavaScript to-do application" />
     </a>
   </div>
 
-  <h3 class="center_text">Personal projects</h3>
-  <p class="center_text xp_info">In this project, I collaborated with a client to develop a website, applying my skills in design and web development.</p>
-  <div class="projects single-project">
+  <!-- INTERNSHIP -->
+  <h3 class="center_text">Internship - Modström</h3>
+
+  <div class="center_text xp_info">
+    <p>
+      During my internship in the e-commerce department at Modström, I gained hands-on experience with website optimization, digital communication, and content creation.
+
+      <br /><br />
+      My responsibilities included working with Shopify, improving website functionality and user experience, and creating visual content for digital campaigns and email marketing.
+      <br /><br />
+      The internship strengthened my ability to develop digital solutions within an established brand identity, collaborate across departments, and understand how AI can support digital communication in a professional environment.
+    </p>
+  </div>
+
+  <!-- PERSONAL PROJECTS -->
+  <h3 class="center_text">Personal Projects</h3>
+
+  <p class="center_text xp_info">Independent and client-based projects where I apply my skills in web development, design, and digital problem-solving.</p>
+
+  <div class="projects personal-projects">
+    <a href="https://www.relocationscandinavia.dk/" target="_blank" rel="noopener noreferrer">
+      <img src="/relocation_scandinavia.webp" alt="Relocation Scandinavia client website project" />
+    </a>
     <a href="https://www.for-otto.dk/" target="_blank" rel="noopener noreferrer">
-      <img src="/for_otto.webp" alt="Donornord projekt" />
+      <img src="/for_otto.webp" alt="For Otto client website project" />
     </a>
   </div>
 </section>
@@ -82,22 +101,41 @@ import NewSection from "./NewSection.astro";
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
   }
 
-  .single-project {
-    grid-template-columns: 1fr;
-    justify-items: center;
+  .personal-projects {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 720px;
   }
 
-  .single-project img {
-    max-width: 350px;
+  .personal-projects img {
+    width: 100%;
+  }
+
+  .experiences_info {
+    padding: var(--space-m) 0 var(--space-m) var(--space-xl);
+    max-width: 65ch;
+  }
+
+  .experiences_info p {
+    padding-top: var(--space-xs);
+    line-height: 1.8;
   }
 
   @media (max-width: 700px) {
+    .experiences_info {
+      padding: var(--space-m) var(--space-xs);
+    }
     .projects {
       padding-inline: var(--space-m);
     }
 
-    .single-project img {
-      max-width: 150px;
+    .personal-projects {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 450px) {
+    .personal-projects {
+      grid-template-columns: 1fr;
     }
   }
 </style>
