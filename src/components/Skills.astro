@@ -6,13 +6,30 @@ import NewSection from "./NewSection.astro";
   <NewSection text="Skills" color="black" side="left" />
 
   <div class="skills_info">
-    <h2>My skills</h2>
-    <p>To be more specific, the following list highlights the skills I have developed through my studies, lectures, and project work. These include both technical competencies and design-related abilities gained through hands-on experience with cases.</p>
+    <h2>My Skills</h2>
+    <p>Through my studies, internship, and personal projects, I have developed a combination of technical, creative, and communication skills. I enjoy applying these competencies to create and improve digital solutions.</p>
   </div>
+
   <ul class="skills">
-    <li><b>Web Development:</b> Visual Studio Code, HTML, CSS, JS, Astro, React, GitHub</li>
-    <li><b>Design Tools:</b> Adobe Illustrator, Photoshop, InDesign, Figma</li>
-    <li><b>UX/UI:</b> Understanding of user experience and interface design principles</li>
+    <li>
+      <b>Web Development:</b>
+      HTML, CSS, JavaScript, Astro, React, Shopify Liquid, Git/GitHub, Visual Studio Code
+    </li>
+
+    <li>
+      <b>Design Tools:</b>
+      Figma, Adobe Illustrator, Photoshop, InDesign, Canva, CapCut
+    </li>
+
+    <li>
+      <b>UX/UI & Digital Design:</b>
+      User-centered design, wireframing, prototyping, usability testing, interface design
+    </li>
+
+    <li>
+      <b>Digital Communication & AI:</b>
+      SEO, email marketing, digital content creation, social media, generative AI for learning, coding, and problem-solving
+    </li>
   </ul>
 </section>
 
@@ -32,6 +49,11 @@ import NewSection from "./NewSection.astro";
     max-width: 65ch;
     margin: 0 auto;
     margin-bottom: var(--space-3xl);
+  }
+
+  .skills li {
+    margin-bottom: var(--space-m);
+    line-height: 1.8;
   }
 
   @media (max-width: 700px) {
