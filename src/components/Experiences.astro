@@ -18,25 +18,40 @@ import NewSection from "./NewSection.astro";
   <h3 class="center_text">School Projects</h3>
   <p class="center_text xp_info">A selection of group projects highlighting my skills in UX/UI design, front-end development, and JavaScript.</p>
 
-  <div class="projects">
-    <a href="https://gajol.vercel.app/" target="_blank" rel="noopener noreferrer">
-      <img src="/nightclub.webp" alt="Nightclub website project" />
-    </a>
+  <div class="projects school-projects">
+    <article class="project-card">
+      <a href="https://gajol.vercel.app/" target="_blank" rel="noopener noreferrer">
+        <img src="/nightclub.webp" alt="Nightclub website project" />
+      </a>
+      <h4>Nightclub Website – Front-End & UX</h4>
+      <p>Developed a responsive website based on a provided design, focusing on implementing functional features and creating intuitive user interactions. My work involved front-end development, usability considerations, and ensuring a smooth user experience.</p>
+    </article>
 
-    <a href="https://donornord.netlify.app/" target="_blank" rel="noopener noreferrer">
-      <img src="/donornord.webp" alt="Donornord website project" />
-    </a>
+    <article class="project-card">
+      <a href="https://donornord.netlify.app/" target="_blank" rel="noopener noreferrer">
+        <img src="/donornord.webp" alt="DonorNord website project" />
+      </a>
+      <h4>DonorNord – UX/UI & Content Creation</h4>
+      <p>Collaborated with a study group to design and develop a website, focusing on visual identity, user-centered design, and digital communication. We were responsible for the design process and produced all photography and video content ourselves.</p>
+    </article>
 
-    <a href="https://babygamegabrielle.netlify.app/spil" target="_blank" rel="noopener noreferrer">
-      <img src="/baby_game.webp" alt="JavaScript game project" />
-    </a>
+    <article class="project-card">
+      <a href="https://babygamegabrielle.netlify.app/spil" target="_blank" rel="noopener noreferrer">
+        <img src="/baby_game.webp" alt="JavaScript game project" />
+      </a>
+      <h4>Baby Game - JavaScript Animation</h4>
+      <p>Developed an interactive browser-based game using JavaScript, focusing on animations, event handling, and user interactions to create an engaging experience.</p>
+    </article>
 
-    <a href="https://gami0001.github.io/exercises/to_do/" target="_blank" rel="noopener noreferrer">
-      <img src="/to_do_app.webp" alt="JavaScript to-do application" />
-    </a>
+    <article class="project-card">
+      <a href="https://gami0001.github.io/exercises/to_do/" target="_blank" rel="noopener noreferrer">
+        <img src="/to_do_app.webp" alt="JavaScript to-do application" />
+      </a>
+      <h4>To-Do Application - JavaScript & DOM Manipulation</h4>
+      <p>Built an interactive task management application using JavaScript, focusing on DOM manipulation, event handling, and dynamic UI updates. Users can mark tasks as completed, move them between task states, and highlight priority tasks.</p>
+    </article>
   </div>
 
-  <!-- INTERNSHIP -->
   <h3 class="center_text">Internship - Modström</h3>
 
   <div class="center_text xp_info">
@@ -50,18 +65,24 @@ import NewSection from "./NewSection.astro";
     </p>
   </div>
 
-  <!-- PERSONAL PROJECTS -->
   <h3 class="center_text">Personal Projects</h3>
 
-  <p class="center_text xp_info">Independent and client-based projects where I apply my skills in web development, design, and digital problem-solving.</p>
+  <p class="center_text xp_info">Independent client projects where I managed the entire process, from initial client communication and wireframing to prototyping, visual design, development, testing, and ongoing improvements. These projects strengthened my ability to translate client needs into functional, user-friendly digital solutions.</p>
 
   <div class="projects personal-projects">
-    <a href="https://www.relocationscandinavia.dk/" target="_blank" rel="noopener noreferrer">
-      <img src="/relocation_scandinavia.webp" alt="Relocation Scandinavia client website project" />
-    </a>
-    <a href="https://www.for-otto.dk/" target="_blank" rel="noopener noreferrer">
-      <img src="/for_otto.webp" alt="For Otto client website project" />
-    </a>
+    <article class="project-card">
+      <a href="https://www.relocationscandinavia.dk/" target="_blank" rel="noopener noreferrer">
+        <img src="/relocation_scandinavia.webp" alt="Relocation Scandinavia client website project" />
+      </a>
+      <h4>Relocation Scandinavia</h4>
+    </article>
+
+    <article class="project-card">
+      <a href="https://www.for-otto.dk/" target="_blank" rel="noopener noreferrer">
+        <img src="/for_otto.webp" alt="For Otto client website project" />
+      </a>
+      <h4>For-Otto</h4>
+    </article>
   </div>
 </section>
 
@@ -120,7 +141,28 @@ import NewSection from "./NewSection.astro";
     line-height: 1.8;
   }
 
+  .school-projects {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 120px;
+  }
+
+  .project-card h4 {
+    margin-top: var(--space-m);
+    margin-bottom: var(--space-xs);
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+
+  .project-card p {
+    line-height: 1.7;
+    font-size: 0.95rem;
+  }
+
   @media (max-width: 700px) {
+    .school-projects {
+      grid-template-columns: 1fr;
+    }
     .experiences_info {
       padding: var(--space-m) var(--space-xs);
     }
